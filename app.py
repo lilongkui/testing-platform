@@ -12,13 +12,13 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 # from starlette.exceptions import ValidationError
 
-from api.option import option_router
+from controller.option import option_router
 from common.events import stopping, startup
 from common.exception import BusinessException_400, BusinessException_401, BusinessException_404, BusinessException_403
 from config.configure import settings
-from api.project import project_router
-from api.user import user_router
-from api.resource import resource_router
+from controller.project import project_router
+from controller.user import user_router
+from controller.resource import resource_router
 
 app = FastAPI(title=settings.SERVICE_NAME)
 

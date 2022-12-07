@@ -12,7 +12,7 @@ from config.configure import settings
 from schemas.user_schema import UserAddSchema, UserUpdateSchema, UserLoginSchema
 from service.user_service import user_service
 
-user_router = APIRouter(prefix=settings.PATH_PREFIX + "/users")
+user_router = APIRouter(prefix=settings.PATH_PREFIX + "/users",tags=["用户"])
 
 
 @user_router.post("")

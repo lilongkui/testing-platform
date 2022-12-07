@@ -12,7 +12,7 @@ from config.configure import settings
 from schemas.project_schema import ProjectAddSchema, ProjectResponseSchema, ProjectUpdateSchema
 from service.project_service import project_service
 
-project_router = APIRouter(prefix=settings.PATH_PREFIX + "/projects")
+project_router = APIRouter(prefix=settings.PATH_PREFIX + "/projects",tags=["项目"])
 
 
 @project_router.post("", response_model=ProjectResponseSchema)

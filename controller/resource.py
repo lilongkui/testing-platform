@@ -15,7 +15,7 @@ from schemas.resource_schema import ResourceTypeAddSchema, ResourceTypeUpdateSch
     ResourceDatabaseUpdateSchema
 from service.resource_service import resource_service
 
-resource_router = APIRouter(prefix=settings.PATH_PREFIX + "/resources")
+resource_router = APIRouter(prefix=settings.PATH_PREFIX + "/resources",tags=["资源"])
 
 
 @resource_router.post("/types")

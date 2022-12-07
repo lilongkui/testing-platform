@@ -10,6 +10,7 @@ class Singleton:
 
         if not cls.__instance:
             cls.__lock.acquire()
+
             if not cls.__instance:
                 cls.__instance=super().__new__(cls)
             cls.__lock.release()

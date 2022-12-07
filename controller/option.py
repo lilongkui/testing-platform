@@ -22,3 +22,4 @@ def get_options_by_type(option_type: OptionTypeEnum = Query(None), request: Requ
     options = OptionService.get_options_by_type(option_type=option_type)
 
     return R.ok(data=options)
+
